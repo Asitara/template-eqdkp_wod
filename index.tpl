@@ -85,7 +85,7 @@
 			
 			<!-- IF S_NORMAL_HEADER and T_BACKGROUND_TYPE == 0 and T_BACKGROUND_POSITION == 'scroll' and not S_IN_ADMIN -->
 			// Background Video -- To disable, set the Background position to fixed in ACP: Style Management
-			$(document).ready(function() {
+			$(function(){
 				if($(window).width() >= 1200) {
 					var html_bg_video  = '<video preload="auto" autoplay="true" loop="loop">';
 						html_bg_video += '	<source src="{TEMPLATE_PATH}/videos/key-render.mp4" type="video/mp4">';
@@ -494,7 +494,7 @@
 		//<![CDATA[
 		
 		<!-- IF not S_LOGGED_IN -->
-		$(document).ready(function() {
+		$(function(){
 			/* Login Dialog */
 			$( "#dialog-login" ).dialog({
 				height: <!-- IF S_BRIDGE_INFO -->450<!-- ELSE -->350<!-- ENDIF -->,
@@ -555,7 +555,7 @@
 		var user_clock_format = "dddd, "+mmocms_user_dateformat_long+" "+ mmocms_user_timeformat;
 		var mymoment = moment(mmocms_user_timestamp_atom).utcOffset(mmocms_user_timezone);
 			
-		$(document).ready(function() {
+		$(function(){
 			$('.notification-mark-all-read').on('click', function() {
 				$('.notification-content ul').html({L_notification_none|jsencode});
 				$('.notification-bubble-red, .notification-bubble-yellow, .notification-bubble-green').hide();
